@@ -1,17 +1,5 @@
 from setuptools import setup, find_packages
 
-setup(name='artpy',
-      version='0.1',
-      description='A suite of art/visually pleasing image generation tools, this module will hopefully grow with time',
-      url='',
-      author='Alexander Benson',
-      author_email='alexander.n.benson@gmail.com',
-      license='BSD-3',
-      packages=find_packages(),
-      zip_safe = False)
-
-
-
 CLASSIFIERS = """
 Development Status :: 1 - Planning
 Intended Audience :: Other Audience
@@ -26,3 +14,19 @@ Operating System :: POSIX
 Operating System :: Unix
 Operating System :: MacOS
 """
+
+setup(
+    name='artpy',
+    version=' 0.1',
+    author='Alexander Benson',
+    author_email='alexander.benson@stmartin.edu',
+    url='',
+    description='Tool for creating visually appealing graphics',
+    #long_description=long_description,
+    packages=find_packages(),
+    classifiers=[f for f in CLASSIFIERS.split('\n') if f],
+    install_requires=['numpy',
+                      'matplotlib'],
+)
+
+
