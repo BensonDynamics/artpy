@@ -9,12 +9,12 @@ import artpy as ap
 
 
 def image_fft(line_img, kernelDim = 5):
-    imgFFT = ap.create_line_drawing_image(img, kernelDim)
+    imgFFT = ap.create_line_drawing_image(line_img, kernelDim)
     return np.fft(imgFFT)
 
 
 def fft_static(line_img, kernelDim = 5):
-    transform = image_fft(img, kernelDim)
+    transform = image_fft(line_img, kernelDim)
 
     for n in transform:
 
@@ -22,13 +22,13 @@ def fft_static(line_img, kernelDim = 5):
 
 
 def fft_arm_animation(line_img, kernelDim=5):
-    transform = image_fft(img, kernelDim)
+    transform = image_fft(line_img, kernelDim)
 
     for n in transform:
 
 
 
 def fft_refinement_animation(line_img, kernelDim=5):
-    transform = image_fft(img, kernelDim)
+    transform = image_fft(line_img, kernelDim)
 
     for n in transform:
