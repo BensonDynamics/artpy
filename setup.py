@@ -7,7 +7,7 @@ setup(name='artpy',
       author='Alexander Benson',
       author_email='alexander.n.benson@gmail.com',
       license='BSD-3',
-      packages=find_packages(where='artpy'),
+      packages=find_packages(where='src/artpy'),
       zip_safe = False)
 
 
