@@ -21,4 +21,4 @@ def convert_images(dir_from, dir_to, file_type = 'jpg'):
             print(file_name)
             img = cv2.imread(os.path.join(dir_from, file_name))
             img_contour = create_line_drawing_image(img)
-            cv2.imwrite(os.path.join(dir_to, file_name), img_contour)Im
+            cv2.imwrite(os.path.join(dir_to, file_name), img_contour)
