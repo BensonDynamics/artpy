@@ -15,16 +15,10 @@ def create_line_drawing_image(img, kernelDim=5):
     return contour
 
 
-def convert_images(dir_from, dir_to):
+def convert_images(dir_from, dir_to, file_type = 'jpg'):
     for file_name in os.listdir(dir_from):
-        if file_name.endswith('.JPG'):
+        if file_name.endswith(file_type) or file_name.endswith(file_type.upper()):
             print(file_name)
             img = cv2.imread(os.path.join(dir_from, file_name))
             img_contour = create_line_drawing_image(img)
-            cv2.imwrite(os.path.join(dir_to, file_name), img_contour)
-
-
-if __name__ == '__main__':
-    dir_src = '/path/to/source/directory'
-    dir_dest = '/path/to/dest/directory'
-    convert_images(dir_src, dir_dest)
+            cv2.imwrite(os.path.join(dir_to, file_name), img_contour)Im
