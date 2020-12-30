@@ -5,11 +5,11 @@ grapics and animations.
 """
 
 import numpy as np
-import artpy as ap
+import artpy.lineDrawing
 
 
 def image_fft(line_img, kernelDim = 5):
-    imgFFT = ap.create_line_drawing_image(line_img, kernelDim)
+    imgFFT = artpy.lineDrawing.create_line_drawing_image(line_img, kernelDim)
     return np.fft(imgFFT)
 
 
