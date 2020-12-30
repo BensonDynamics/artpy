@@ -5,12 +5,9 @@ grapics and animations.
 """
 
 import numpy as np
-import artpy.lineDrawing
 
-
-def image_fft(line_img, kernelDim = 5):
-    imgFFT = artpy.lineDrawing.create_line_drawing_image(line_img, kernelDim)
-    return np.fft.rfft(imgFFT)[0]
+def image_fft(line_img):
+    return np.fft.rfft(line_img)[0]
 
 def fourier_draw(fft, n = len(fft), time_range = np.linspace(0,2*np.pi,1000), color = 'b'):
 
