@@ -13,8 +13,11 @@ def image_fft(line_img, kernelDim = 5):
     return np.fft.rfft(imgFFT)[0]
 
 def fourier_draw(fft, n = len(fft), time_range = np.linspace(0,2*np.pi,1000), color = 'b'):
+
+
     freq_coef = np.arange(0, n)
     XY = np.ones((len(time_range),2))
     for t in time_range:
-        XY[t][:] = [np.sum(fft*np.cos(freq_coef*t)), np.sum(fft*np.sin(freq_coef*t))
+        XY[t][:] = [np.sum(np.multiply(fft, np.cos(freq_coef*t))),
+                    np.sum(np.multiply(fft, np.sin(freq_coef*t)))]
     return XY
