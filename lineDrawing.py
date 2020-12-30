@@ -37,5 +37,5 @@ def convert_images(dir_from, dir_to,  file_type='jpg', kernelDim=5,
         return {'names': names, 'images':imgs}
     elif load_imgs:
         return imgs
-    elif return_names
+    elif return_names:
         return names
