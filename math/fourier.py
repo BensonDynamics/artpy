@@ -16,7 +16,7 @@ def image_fft(line_img, kernelDim = 5):
 def fft_static(line_img, kernelDim = 5):
     transform = image_fft(line_img, kernelDim)
 
-    for n in transform:
+    #for n in transform:
 
 
 
@@ -24,11 +24,12 @@ def fft_static(line_img, kernelDim = 5):
 def fft_arm_animation(line_img, kernelDim=5):
     transform = image_fft(line_img, kernelDim)
 
-    for n in transform:
+    #for n in transform:
+
 
 
 
 def fft_refinement_animation(line_img, kernelDim=5):
     transform = image_fft(line_img, kernelDim)
 
-    for n in transform:
+    #for n in transform:
