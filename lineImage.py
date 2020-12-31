@@ -12,8 +12,8 @@ def create_line_drawing_image(img, kernelDim=5):
     img_dilated = cv2.dilate(img_gray, kernel, iterations=1)
     img_diff = cv2.absdiff(img_dilated, img_gray)
     contour = 255 - img_diff
-    return contour
 
+    return contour
 
 def convert_images(dir_from, dir_to,  file_type='jpg', kernelDim=5,
                    load_imgs = False, return_names = False):
