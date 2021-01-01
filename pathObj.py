@@ -14,7 +14,7 @@ class PathObject():
                     self.imageArray[i][j] = 0
 
     def show(self):
-        plt.show(self.imageArray)
+        plt.show(np.asarray(self.imageArray))
 
     def tour(self):
         return
