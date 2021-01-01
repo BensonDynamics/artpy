@@ -12,8 +12,8 @@ class PathObject():
         plt.imshow(self.imageArray)
 
     def tour(self):
-
+        return
 
     def path(self):
-
+        return
 
