@@ -1,24 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+from
 
 class PathObject():
     """Create single path from a line-like image"""
-    def __init__(self, imageArray, threshold = 50):
+    def __init__(self, imageArray, threshold = 200, scale = 3):
         self.imageArray = imageArray
-        for i in range(len(self.imageArray)):
-            for j in range(len(self.imageArray[0])):
-                if self.imageArray[i][j] > threshold:
-                    self.imageArray[i][j] = 255
-                else:
-                    self.imageArray[i][j] = 0
+        self.imageArray[self.imageArray > threshold] = 1
+        self.img_sm = self.imageArray.resize(tuple([int(v / scale) for v in self.imageArray.size]))
 
     def show(self):
-        plt.show(np.asarray(self.imageArray))
+        plt.imshow(self.imageArray)
+        plt.show()
 
     def tour(self):
         return
 
+
     def path(self):
         return
+
 
