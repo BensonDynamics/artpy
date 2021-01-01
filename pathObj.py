@@ -9,12 +9,12 @@ class PathObject():
         for i in range(len(self.imageArray)):
             for j in range(len(self.imageArray[0])):
                 if self.imageArray[i][j] > threshold:
-                    self.imageArray[i][j] = 1
+                    self.imageArray[i][j] = 255
                 else:
                     self.imageArray[i][j] = 0
 
     def show(self):
-        plt.imshow(self.imageArray)
+        plt.show(self.imageArray)
 
     def tour(self):
         return
