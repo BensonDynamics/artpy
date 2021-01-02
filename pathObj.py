@@ -29,7 +29,7 @@ class PathObject():
         # i.e., the 10th non-zero pixel will have 10 in its place
         flat_img_mod = deepcopy(self.imageArray)
 
-        for rel, pix in enumerate(abs_index):
+        for rel, pix in abs_index:
             flat_img_mod[pix] = rel + 1
 
         """
