@@ -26,6 +26,8 @@ setup(
     packages=find_packages(),
     classifiers=[f for f in CLASSIFIERS.split('\n') if f],
     install_requires=['numpy',
+                      'scipy',
+                      'opencv-python',
                       'matplotlib'],
 )
 

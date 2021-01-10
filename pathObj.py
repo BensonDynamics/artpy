@@ -11,6 +11,8 @@ class PathObject():
         self.imageArray[self.imageArray > threshold] = 0
         self.imageArray[self.imageArray > 0] = 1
 
+        self.imageArrayFlat = np.reshape(self.imageArray, self.imageArray.size)
+
 
 
     def show_original(self):
@@ -27,9 +29,9 @@ class PathObject():
 
         # Replace each non-zero pixel in the array with its number
         # i.e., the 10th non-zero pixel will have 10 in its place
-        flat_img_mod = deepcopy(self.imageArray)
+        flat_img_mod = deepcopy(self.imageArrayFlat)
 
-        for rel, pix in abs_index:
+        for rel, pix in enumerate(abs_index):
             flat_img_mod[pix] = rel + 1
 
         """
