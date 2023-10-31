@@ -1,18 +1,18 @@
 from setuptools import setup, find_packages
 
 CLASSIFIERS = """
-Development Status :: 1 - Planning
-Intended Audience :: Other Audience
-Intended Audience :: Developers
-License :: OSI Approved :: BSD License
+Development Status :: 1 - Planning,
+Intended Audience :: Other Audience,
+Intended Audience :: Developers,
+License :: OSI Approved :: BSD License,
 
-Programming Language :: Python :: 3.6
-Topic :: Software Development
-Topic :: Artistic Software
-Operating System :: Microsoft :: Windows
-Operating System :: POSIX
-Operating System :: Unix
-Operating System :: MacOS
+Programming Language :: Python :: 3.6,
+Topic :: Software Development,
+Topic :: Artistic Software,
+Operating System :: Microsoft :: Windows,
+Operating System :: POSIX,
+Operating System :: Unix,
+Operating System :: MacOS,
 """
 
 setup(
